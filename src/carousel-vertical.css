@@ -1,0 +1,72 @@
+/**
+ * carousel vertical
+ * @version 1.0
+ * @author Simone Iannacone
+ */
+.cv-carousel {
+	display: block;
+	height: 100%;
+	z-index: 1;
+}
+.cv-carousel.cv-grab {
+	cursor: move;
+	cursor: grab;
+}
+.cv-carousel .cv-stage-outer {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	-webkit-transform: translate3d(0, 0, 0);
+}
+.cv-carousel .cv-stage {
+	transition: all 0.25s ease;
+	position: relative;
+	-ms-touch-action: pan-Y;
+	-moz-backface-visibility: hidden;
+}
+.cv-carousel,
+.cv-carousel .cv-item {
+	-webkit-tap-highlight-color: transparent;
+	position: relative;
+}
+.cv-carousel .cv-item,
+.cv-carousel .cv-wrapper {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+}
+.cv-carousel .cv-item {
+	min-height: 1px;
+	width: 100%;
+	-webkit-backface-visibility: hidden;
+	-webkit-touch-callout: none;
+}
+.cv-carousel.cv-drag .cv-item {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.cv-carousel.cv-drag .cv-item .item {
+	height: 100%;
+}
+.cv-nav {
+	float: left;
+	clear: left;
+	margin-right: 10px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.cv-nav .cv-prev,
+.cv-nav .cv-next {
+	font-size: 14px;
+	margin: 5px;
+	padding: 4px 7px;
+	background: #D6D6D6;
+	cursor: pointer;
+	border-radius: 3px;
+}
